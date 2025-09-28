@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Phishing Simulation | CyberSafe BD" data-bn="ফিশিং সিমুলেশন | CyberSafe BD">ফিশিং সিমুলেশন | CyberSafe BD</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Firebase SDK - Same as index.html -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- তোমার ছবিটি থেকে Firebase Configuration -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyQjIyQv08jKSlc8EQUZ0SR16XHTBNSIQ",
+        authDomain: "cybersafe-bd-6a72b.firebaseapp.com",
+        projectId: "cybersafe-bd-6a72b",
+        storageBucket: "cybersafe-bd-6a72b.appspot.com",
+        messagingSenderId: "1026958212236",
+        appId: "1:1026958212236:web:0ad47a8ba4f99c9ce48fa9",
+        measurementId: "G-M32N4VHB95"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+    </script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CyberSafe BD</div>
+        <nav class="nav">
+            <a href="index.html" data-en="Home" data-bn="হোম">হোম</a>
+            <a href="quiz.html" data-en="Quiz" data-bn="কুইজ">কুইজ</a>
+            <a href="simulation.html" class="active" data-en="Simulation" data-bn="সিমুলেশন">সিমুলেশন</a>
+            <a href="#" id="lang-toggle" data-en="বাংলা" data-bn="English">বাংলা</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="quiz-section" id="simulation-section">
+            <h1 data-en="Phishing Email Simulation" data-bn="ফিশিং ইমেল সিমুলেশন">ফিশিং ইমেল সিমুলেশন</h1>
+            <p data-en="Experience a realistic phishing attempt. Click the link to see if you get fooled!" data-bn="একটি বাস্তব ফিশিং প্রচেষ্টার অভিজ্ঞতা নিন। আপনি বোকা বনে যান কিনা দেখতে লিঙ্কে ক্লিক করুন!">একটি বাস্তব ফিশিং প্রচেষ্টার অভিজ্ঞতা নিন। আপনি বোকা বনে যান কিনা দেখতে লিঙ্কে ক্লিক করুন!</p>
+            
+            <div class="phishing-box">
+                <h3 data-en="INBOX: Urgent Security Alert" data-bn="ইনবক্স: জরুরি নিরাপত্তা সতর্কতা">ইনবক্স: জরুরি নিরাপত্তা সতর্কতা</h3>
+                <div class="email-header">
+                    <p data-en="From:" data-bn="প্রেরক:">প্রেরক:</p> <span>security@amaz0n-update.com</span>
+                    <p data-en="Subject:" data-bn="বিষয়:">বিষয়:</p> <span data-en="Your Amazon Account Has Been Suspended" data-bn="আপনার অ্যামাজন অ্যাকাউন্ট স্থগিত করা হয়েছে">আপনার অ্যামাজন অ্যাকাউন্ট স্থগিত করা হয়েছে</span>
+                </div>
+                <div class="email-body">
+                    <p data-en="Dear Customer," data-bn="প্রিয় গ্রাহক,">প্রিয় গ্রাহক,</p>
+                    <p data-en="We have detected unauthorized login attempts on your account. To prevent further security breaches, your account has been temporarily locked." data-bn="আমরা আপনার অ্যাকাউন্টে অননুমোদিত লগইন প্রচেষ্টা শনাক্ত করেছি। আরও নিরাপত্তা লঙ্ঘন এড়াতে, আপনার অ্যাকাউন্ট সাময়িকভাবে লক করা হয়েছে।">আমরা আপনার অ্যাকাউন্টে অননুমোদিত লগইন প্রচেষ্টা শনাক্ত করেছি। আরও নিরাপত্তা লঙ্ঘন এড়াতে, আপনার অ্যাকাউন্ট সাময়িকভাবে লক করা হয়েছে।</p>
+                    <p data-en="Please click the secure link below immediately to verify your identity and unlock your account:" data-bn="আপনার পরিচয় যাচাই এবং আপনার অ্যাকাউন্ট আনলক করতে অনুগ্রহ করে নিচের সুরক্ষিত লিঙ্কে অবিলম্বে ক্লিক করুন:">আপনার পরিচয় যাচাই এবং আপনার অ্যাকাউন্ট আনলক করতে অনুগ্রহ করে নিচের সুরক্ষিত লিঙ্কে অবিলম্বে ক্লিক করুন:</p>
+                    <a href="#" id="phishing-link" class="cta-button" data-en="Verify Your Account Now" data-bn="এখনই আপনার অ্যাকাউন্ট যাচাই করুন">এখনই আপনার অ্যাকাউন্ট যাচাই করুন</a>
+                    <p data-en="Failure to verify within 24 hours will result in permanent account closure." data-bn="২৪ ঘন্টার মধ্যে যাচাই করতে ব্যর্থ হলে অ্যাকাউন্ট স্থায়ীভাবে বন্ধ হয়ে যাবে।">২৪ ঘন্টার মধ্যে যাচাই করতে ব্যর্থ হলে অ্যাকাউন্ট স্থায়ীভাবে বন্ধ হয়ে যাবে।</p>
+                    <p data-en="Thank you," data-bn="ধন্যবাদ,">ধন্যবাদ,</p>
+                    <p>The Amazon Security Team</p>
+                </div>
+            </div>
+            
+            <div id="simulation-feedback" class="scorecard" style="display: none; margin-top: 30px;">
+                <!-- Feedback content will be inserted here -->
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-en="&copy; 2024 CyberSafe BD. A project by Hriditapritha-art." data-bn="&copy; ২০২৪ CyberSafe BD. হ্রদিতা-আর্ট দ্বারা একটি প্রকল্প।">&copy; ২০২৪ CyberSafe BD. হ্রদিতা-আর্ট দ্বারা একটি প্রকল্প।</p>
+    </footer>
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+          </html>
+  
