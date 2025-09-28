@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyQjIyQv08jKSlc8EQUZ0SR16XHTBNSIQ",
+    authDomain: "cybersafe-bd-6a72b.firebaseapp.com",
+    projectId: "cybersafe-bd-6a72b",
+    storageBucket: "cybersafe-bd-6a72b.appspot.com",
+    messagingSenderId: "1026958212236",
+    appId: "1:1026958212236:web:0ad47a8ba4f99c9ce48fa9",
+    measurementId: "G-M32N4VHB95"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+</script>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
